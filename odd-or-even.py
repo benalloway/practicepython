@@ -15,14 +15,32 @@
 # else:
 # 	print("You entered the number: " + str(num) + ". which is an odd number")
 
-# second attempt, going after the first extra:
+# extra 1:
 
-num = int(input("Please enter a number: "))
+# num = int(input("Please enter a number: "))
+
+# if num % 2 == 0:
+# 	if num % 4 == 0:
+# 		print("You entered the number: " + str(num) + ". which is an even number and is a multiple of 4")
+# 	else:
+# 		print("You entered the number: " + str(num) + ". which is an even number")
+# else:
+# 	print("You entered the number: " + str(num) + ". which is an odd number")
+
+# extra 2:
+
+num = int( input( "Please enter a number: " ) )
+divideBy = int( input( "Please enter a number to divide by: " ) )
 
 if num % 2 == 0:
 	if num % 4 == 0:
-		print("You entered the number: " + str(num) + ". which is an even number and is a multiple of 4")
+		print( "You entered the number: " + str( num ) + ". which is an even number and is a multiple of 4" )
 	else:
-		print("You entered the number: " + str(num) + ". which is an even number")
+		print( "You entered the number: " + str( num ) + ". which is an even number" )
 else:
-	print("You entered the number: " + str(num) + ". which is an odd number")
+	print("You entered the number: " + str( num ) + ". which is an odd number" )
+
+if num % divideBy == 0:
+	print( "And " + str( divideBy ) + " divides evenly into " + str( num ) )
+else:
+	print( "And " + str( divideBy ) + " does not divide evenly into " + str( num ) )
