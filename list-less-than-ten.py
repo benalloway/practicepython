@@ -9,18 +9,19 @@
 
 
 # first attempt, going for the basics:
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+# a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 
-for x in a:
-	if x < 5:
-		print(x)
+# for x in a:
+# 	if x < 5:
+# 		print(x)
 
 # second attempt, extras 1:
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-n = []
-for x in a:
-	if x < 5:
-		n.append(x)
-print(n)
+# a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+# n = []
+# for x in a:
+# 	if x < 5:
+# 		n.append(x)
+# print(n)
 
 # third attemp, extras 2:
+print([x for x in [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] if x < 5])
