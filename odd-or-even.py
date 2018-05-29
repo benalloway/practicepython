@@ -8,9 +8,21 @@
 
 # first attempt, just the basics
 
+# num = int(input("Please enter a number: "))
+
+# if num % 2 == 0:
+# 	print("You entered the number: " + str(num) + ". which is an even number")
+# else:
+# 	print("You entered the number: " + str(num) + ". which is an odd number")
+
+# second attempt, going after the first extra:
+
 num = int(input("Please enter a number: "))
 
 if num % 2 == 0:
-	print("You entered the number: " + str(num) + ". which is an even number")
+	if num % 4 == 0:
+		print("You entered the number: " + str(num) + ". which is an even number and is a multiple of 4")
+	else:
+		print("You entered the number: " + str(num) + ". which is an even number")
 else:
 	print("You entered the number: " + str(num) + ". which is an odd number")
