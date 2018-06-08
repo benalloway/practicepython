@@ -2,7 +2,7 @@
 
 # First attempt
 
-ustr = input('Please enter a string: ')
+ustr = input('Please enter a string: ').lower()
 rstr = ustr[::-1]
 if ustr == rstr:
 	print('that is a Palindrome')
