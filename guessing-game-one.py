@@ -8,4 +8,22 @@
 
 import random
 ran = random.randint(1, 9)
-print(ran)
+while True:
+	try:
+		usr = input("Guess a number between 1 and 9! ")
+		if usr == 'quit':
+			print("Buh-Bye!")
+			break
+		
+		usr = int(usr)
+		if usr > 9 or usr < 1:
+			print("You gotta enter a number between 1 and 9, silly")
+		elif usr == ran:
+			print("YOU GOT IT!")
+			break
+		elif usr > ran:
+			print("You guessed to high... Guess again!")
+		elif usr < ran:
+			print("You guessed to low... Guess again!")
+	except:
+		print("You gotta enter a NUMBER, silly")
