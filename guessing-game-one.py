@@ -11,7 +11,7 @@ ran = random.randint(1, 9)
 while True:
 	try:
 		usr = input("Guess a number between 1 and 9! ")
-		if usr == 'quit':
+		if usr == 'exit':
 			print("Buh-Bye!")
 			break
 		
