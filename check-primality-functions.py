@@ -5,7 +5,10 @@
 # First Attempt:
 
 def getNumber(help_text="Give me a number: "):
-	return int(input(help_text))
+	try:
+		return int(input(help_text))
+	except:
+		return 00
 
 def isPrime(i):
 	if (i % 2 != 0 and i % 3 != 0) or i == 2 or i == 3:
