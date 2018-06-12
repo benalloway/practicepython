@@ -5,18 +5,21 @@
 # First Attempt:
 
 def getNumber(help_text="Give me a number: "):
-	try:
-		return int(input(help_text))
-	except:
-		return 00
+	return int(input(help_text))
 
 def isPrime(i):
-	if (i % 2 != 0 and i % 3 != 0) or i == 2 or i == 3:
-		return True
+	isP = True
+	if i > 1:
+		for x in range(2, i):
+			if (i % x) == 0:	
+				isP = False
+				break
 	else:
-		return False
+		isP = False
+	return isP
 
+	
 if isPrime(getNumber()):
-	print("That number is a prime number!")
+	print("Number is prime")
 else:
-	print("That number is NOT prime")
+	print("Number is not prime")
