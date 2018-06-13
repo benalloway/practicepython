@@ -4,18 +4,32 @@
 # 1) Write two different functions to do this - one using a loop and constructing a list, and another using sets.
 # 2) Go back and do Exercise 5 using sets, and write the solution for that in a different function.
 
-def list():
+# def list():
+# 	import random
+# 	l = []
+# 	for x in range(random.randint(5,50)):
+# 		 l.append(random.randint(1,100))
+# 	return l
+
+# def uniqueList(lst):
+# 	newlst = []
+# 	for x in lst:
+# 		if x not in newlst:
+# 			newlst.append(x)
+# 	return newlst
+
+# print(uniqueList(list()))
+
+# using sets()
+
+def ranlist():
 	import random
 	l = []
-	for x in range(random.randint(5,50)):
-		 l.append(random.randint(1,100))
+	for x in range(random.randint(2,15)):
+		l.append(random.randint(1,15))
 	return l
 
-def uniqueList(lst):
-	newlst = []
-	for x in lst:
-		if x not in newlst:
-			newlst.append(x)
-	return newlst
+def newlist(ls):
+	return set(ls)
 
-print(uniqueList(list()))
+print(newlist(ranlist()))
