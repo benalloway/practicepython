@@ -7,24 +7,36 @@
 
 import random
 
-def password(strength=1):
+def password():
 	choices2 = ['1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 	choices3 = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','!','@','#','$','%','&','*']
 	password = ''
 	
-	if strength == 1:
-		weakOptions = ['gravity', 'password', 'admin', 'root']
-		password = random.choice(weakOptions)
-	
-	if strength == 2:
-		for x in range(random.randint(8,12)):
-			password += random.choice(choices2)
+	while True:
+		try:
+			strength = int(input("Please input desired password strength between 1 and 3: "))
+			if strength == 1:
+				weakOptions = ['gravity', 'password', 'admin', 'root']
+				password = random.choice(weakOptions)
+				print("your new password is: " + str(password))
+				break
+			
+			elif strength == 2:
+				for x in range(random.randint(8,12)):
+					password += random.choice(choices2)
+				print("your new password is: " + str(password))
+				break
 
-	if strength == 3:
-		for x in range(random.randint(8,16)):
-			password += random.choice(choices2)
-			password += random.choice(choices3)
+			elif strength == 3:
+				for x in range(random.randint(8,16)):
+					password += random.choice(choices2)
+					password += random.choice(choices3)
+				print("your new password is: " + str(password))
+				break
 
-	print("your new password is: " + str(password))
+			else:
+				print("\nplease select a number between 1 and 3\n")
+		except:
+			print("\nplease select a number between 1 and 3\n")
 
-password(int(input("Please input desired password strength between 1 and 3: ")))
+password()
