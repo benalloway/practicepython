@@ -12,15 +12,12 @@
 
 # gimmeString(input("enter a sentance: "))
 
-# complexity
-
+# give me complexity!
 def reverse(s):
-	string = []
-	reverses = []
-	for a in s:
-		string.append(a)
-	for x in range(string-1, -1, -1):
-		reverses.append(string[x])
-	print(reverses)
+	slist = s.split(" ")
+	sreverse = []
+	for x in range(len(slist)-1, -1, -1):
+		sreverse.append(slist[x])
+	print(" ".join(sreverse))
 
-reverse(input("gimme a string"))
+reverse(input("gimme a string: "))
