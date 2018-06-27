@@ -22,9 +22,13 @@ guesses = 0
 
 while True:
 	guess = input('Enter a 4-digit number: ')
+	if len(guess) != 4:
+		print("needs to be 4-digits")
+		continue
 	cows = 0
 	bulls = 0
-
+	guesses += 1
+	
 	if guess == answer:
 		print("YOU GOT IT!! " + answer + ". in " + str(guesses) + " tries!")
 		break
