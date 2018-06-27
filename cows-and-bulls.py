@@ -26,7 +26,7 @@ while True:
 	bulls = 0
 
 	if guess == answer:
-		print("YOU GOT IT!! " + answer)
+		print("YOU GOT IT!! " + answer + ". in " + str(guesses) + " tries!")
 		break
 
 	for x in range(3):
